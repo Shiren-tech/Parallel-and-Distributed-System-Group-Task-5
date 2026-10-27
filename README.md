@@ -80,6 +80,10 @@ Suggested tests:
 
 Record the actual test results and include screenshots as evidence.
 
+## System Architecture
+
+![Campus Announcement System Architecture](docs/Dr.png)
+
 8. Conclusion
 
 The Campus Announcement System demonstrates TCP socket communication, multithreading, and message broadcasting in Python. It provides a simple example of how a server can distribute announcements to multiple connected clients.
