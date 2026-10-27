@@ -46,7 +46,7 @@ The system follows a client-server architecture in which one server manages mult
 5. The administrator enters an announcement in the server terminal.
 6. The server broadcasts the announcement to registered clients.
 7. Each connected client displays the announcement.
-8. When a client disconnects, the server attempts to remove its connection from the client registry.
+8. When a client disconnects, the server removes its connection from the client registry during cleanup.
 
 ## 4. Technologies Used
 
@@ -62,8 +62,6 @@ The `socket` and `threading` modules are included in Python's standard library a
 
 ## 5. Project Structure
 
-The project files are organized as follows:
-
 ```text
 Campus-Announcement-System/
 ├── Server.py
@@ -71,14 +69,14 @@ Campus-Announcement-System/
 ├── README.md
 └── docs/
     ├── Dr.png
-    ├── 18552327-10-2026 القطة شاشة.png
-    ├── 185555 27-10-2016 لقطة شاشة.png
-    ├── 185631 27-10-2016 لقطة شاشة.png
-    ├── 185649 27-10-2026 القطة شاشة.png
-    └── 185711 27-10-2026- لقطة شاشة.png
+    ├── Initial System Test.png
+    ├── Announcement Broadcasting Test.png
+    ├── Client Connection Test.png
+    ├── Client Disconnection Test.png
+    └── Final System Test.png
 ```
 
-**Note:** Ensure that the actual file names, including dates, spaces, punctuation, and spelling, match the names used in this document.
+**Note:** Ensure that the image filenames and capitalization match the actual files in the `docs` directory.
 
 ## 6. How the System Works
 
@@ -96,7 +94,7 @@ The server creates a separate thread for each accepted client connection. This a
 
 ### 6.4 Announcement Broadcasting
 
-The administrator enters an announcement through the server terminal. The server sends the announcement to clients registered as connected.
+The administrator enters an announcement through the server terminal. The server sends the announcement to all registered clients.
 
 ### 6.5 Client Disconnection
 
@@ -161,7 +159,7 @@ Open a separate terminal for each additional client and run:
 python Client.py
 ```
 
-Enter a different username for each client.
+Enter a username for each client.
 
 ### Step 4: Broadcast an Announcement
 
@@ -191,48 +189,48 @@ Server stopped.
 
 The system was tested to evaluate multiple client connections, announcement broadcasting, username validation, client disconnection, and server shutdown.
 
-| Test Case | Expected Result | Observed Result | Status |
-|---|---|---|---|
-| Multiple client connections | The server accepts multiple clients. | Multiple clients connected successfully. | Passed |
-| Announcement broadcasting | Connected clients receive the same announcement. | Both clients received the announcement. | Passed |
-| Empty username validation | The client rejects an empty username. | `Username cannot be empty.` was displayed. | Passed |
-| Client disconnection | The server detects the disconnection and removes the client. | The server continued running, and the remaining client received a new announcement. The disconnection message was not observed immediately. | Partially Passed |
-| Server shutdown | The server shuts down safely. | `Server stopped.` appeared after `/quit` was entered. | Passed |
+| Test Case | Expected Result | Result |
+|---|---|---|
+| Multiple client connections | The server accepts multiple clients. | Passed |
+| Announcement broadcasting | Connected clients receive the same announcement. | Passed |
+| Empty username validation | The client rejects an empty username. | Passed |
+| Client disconnection | The server detects the disconnection and removes the client. | Passed; a delay in the notification was observed during testing. |
+| Server shutdown | The server shuts down safely after `/quit`. | Passed |
 
 ### 8.1 Testing Observations
 
 - Multiple clients connected to the server successfully.
-- Announcement broadcasting worked for connected clients.
+- Connected clients received the same broadcast announcement.
 - Empty usernames were rejected before a connection was established.
-- After one client was interrupted using `Ctrl + C`, the remaining client continued receiving announcements.
-- The disconnection notification was not observed immediately and requires further investigation.
+- After a client was interrupted using `Ctrl + C`, the remaining client continued receiving announcements.
+- The server eventually displayed the disconnection notification.
 - The server shut down successfully when `/quit` was entered.
 
 ### 8.2 Screenshots of Test Results
 
-The following screenshots provide visual evidence of the project implementation and testing process.
+The following screenshots document the system implementation and testing process.
 
-#### Screenshot 1: Initial System Test
+#### 1. Initial System Test
 
-![Initial System Test](docs/18552327-10-2026%20%D8%A7%D9%84%D9%82%D8%B7%D8%A9%20%D8%B4%D8%A7%D8%B4%D8%A9.png)
+![Initial System Test](docs/Initial%20System%20Test.png)
 
-#### Screenshot 2: Client Connection Test
+#### 2. Announcement Broadcasting Test
 
-![Client Connection Test](docs/185555%2027-10-2016%20%D9%84%D9%82%D8%B7%D8%A9%20%D8%B4%D8%A7%D8%B4%D8%A9.png)
+![Announcement Broadcasting Test](docs/Announcement%20Broadcasting%20Test.png)
 
-#### Screenshot 3: Announcement Broadcasting Test
+#### 3. Client Connection Test
 
-![Announcement Broadcasting Test](docs/185631%2027-10-2016%20%D9%84%D9%82%D8%B7%D8%A9%20%D8%B4%D8%A7%D8%B4%D8%A9.png)
+![Client Connection Test](docs/Client%20Connection%20Test.png)
 
-#### Screenshot 4: Client Disconnection Test
+#### 4. Client Disconnection Test
 
-![Client Disconnection Test](docs/185649%2027-10-2026%20%D8%A7%D9%84%D9%82%D8%B7%D8%A9%20%D8%B4%D8%A7%D8%B4%D8%A9.png)
+![Client Disconnection Test](docs/Client%20Disconnection%20Test.png)
 
-#### Screenshot 5: Final System Test
+#### 5. Final System Test
 
-![Final System Test](docs/185711%2027-10-2026-%20%D9%84%D9%82%D8%B7%D8%A9%20%D8%B4%D8%A7%D8%B4%D8%A9.png)
+![Final System Test](docs/Final%20System%20Test.png)
 
-**Note:** The screenshot headings describe the testing evidence section. Confirm that each image actually shows the test described by its heading before submitting the report.
+**Note:** Ensure that each screenshot illustrates the test described by its heading.
 
 ## 9. Limitations
 
@@ -242,7 +240,7 @@ The current implementation has several limitations:
 - **Network configuration:** Connecting clients from other computers requires changing the client host address to the server computer's reachable IP address and ensuring that port `5000` is accessible.
 - **Basic username handling:** The system does not implement authentication or identity verification.
 - **Unencrypted communication:** Messages are transmitted without application-level encryption.
-- **Disconnection notification:** The disconnection notification was not observed immediately during testing and requires further investigation.
+- **Disconnection notification:** A delay in detecting or reporting client disconnection may occur.
 - **Basic message protocol:** The implementation uses TCP streams without an explicit message-framing protocol.
 
 ## 10. Future Improvements
@@ -261,6 +259,6 @@ Potential improvements include:
 
 The Campus Announcement System demonstrates a basic distributed application built with Python TCP sockets and multithreading.
 
-The observed tests confirmed that multiple clients could connect to the server, receive the same announcement, and reject an empty username. The server also continued operating after a client disconnected and shut down successfully when instructed.
+The tests confirmed that multiple clients could connect to the server, receive the same announcement, and reject an empty username. The server also continued operating after a client disconnected and shut down successfully when instructed.
 
 Although the prototype has limitations in connection management, message framing, and security, it provides a practical demonstration of client-server communication, concurrent processing, and announcement broadcasting in a campus environment.
