@@ -212,10 +212,10 @@ The following screenshots document the system implementation and testing process
 
 #### 1. Initial System Test
 
-[![Initial System Test]](https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/37cd3a28ad88da014824de6c941abb0c78dba8a1/docs/Initial%20System%20Test)
+[![Initial System Test[](https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/37cd3a28ad88da014824de6c941abb0c78dba8a1/docs/Initial%20System%20Test)](https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/3515b9bb630fc62f07efd164fa1855c14255932b/docs/Initial%20System%20Test)
 #### 2. Announcement Broadcasting Test
 
-![Announcement Broadcasting Test](docs/Announcement%20Broadcasting%20Test.png)
+![Announcement Broadcasting Test](docs/Announcement%20Broadcasting%20Test.png)](https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/3515b9bb630fc62f07efd164fa1855c14255932b/docs/Announcement%20Broadcast.png)
 
 #### 3. Client Connection Test
 
@@ -228,7 +228,7 @@ The following screenshots document the system implementation and testing process
 #### 5. Final System Test:
 
 ![Final System Test[] https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/e28847c383208b391036d93d4991f89ff10460a4/docs/Final%20System%20Test.png)
-](https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/e28847c383208b391036d93d4991f89ff10460a4/docs/Final%20System%20Test.png)](https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/e28847c383208b391036d93d4991f89ff10460a4/docs/Final%20System%20Test.png)
+
 **Note:** Ensure that each screenshot illustrates the test described by its heading.
 
 ## 9. Limitations
