@@ -225,7 +225,7 @@ The following screenshots document the system implementation and testing process
 
 ![Client Disconnection Test](docs/Client%20Disconnection%20Test.png)
 
-#### 5. Final System Test
+#### 5. Final System Test:
 
 ![Final System Test[] https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/e28847c383208b391036d93d4991f89ff10460a4/docs/Final%20System%20Test.png)
 ](https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/e28847c383208b391036d93d4991f89ff10460a4/docs/Final%20System%20Test.png)](https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/e28847c383208b391036d93d4991f89ff10460a4/docs/Final%20System%20Test.png)
