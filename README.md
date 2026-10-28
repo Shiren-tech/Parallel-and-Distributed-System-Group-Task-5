@@ -212,7 +212,7 @@ The following screenshots document the system implementation and testing process
 
 #### 1. Initial System Test
 
-![Initial System Test](docs/Initial%20System%20Test.png)
+![Initial System Test]([docs/Initial%20System%20Test.png)
 
 #### 2. Announcement Broadcasting Test
 
