@@ -227,8 +227,8 @@ The following screenshots document the system implementation and testing process
 
 #### 5. Final System Test:
 
-![Final System Test[] https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/e28847c383208b391036d93d4991f89ff10460a4/docs/Final%20System%20Test.png)
-
+![Final System Test[](https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/e28847c383208b391036d93d4991f89ff10460a4/docs/Final%20System%20Test.png)
+](https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/917b62360a7051ea85f78da7efe6323670253c5b/docs/Final%20System%20Test.png)
 **Note:** Ensure that each screenshot illustrates the test described by its heading.
 
 ## 9. Limitations
