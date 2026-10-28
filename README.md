@@ -212,8 +212,7 @@ The following screenshots document the system implementation and testing process
 
 #### 1. Initial System Test
 
-![Initial System Test](docs/Initial System Test)
-
+[![Initial System Test](https://github.com/Shiren-tech/Parallel-and-Distributed-System-Group-Task-5/blob/37cd3a28ad88da014824de6c941abb0c78dba8a1/docs/Initial%20System%20Test)
 #### 2. Announcement Broadcasting Test
 
 ![Announcement Broadcasting Test](docs/Announcement%20Broadcasting%20Test.png)
